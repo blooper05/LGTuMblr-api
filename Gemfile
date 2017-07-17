@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-# gem "rails"
+gem 'sinatra'
 
 group :development do
   gem 'annotate_gem' # Add comments to your Gemfile with each dependency's description.
