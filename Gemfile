@@ -2,5 +2,8 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'rubocop'
-gem 'annotate_gem'
+
+group :development do
+  gem 'rubocop'
+  gem 'annotate_gem'
+end
