@@ -5,6 +5,7 @@ GEM
       bundler (~> 1.1)
     ast (2.3.0)
     mustermann (1.0.0)
+    oj (3.3.2)
     parallel (1.11.2)
     parser (2.4.0.0)
       ast (~> 2.2)
@@ -36,6 +37,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate_gem
+  oj
   rubocop
   sinatra
 
