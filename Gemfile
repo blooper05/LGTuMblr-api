@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'oj'
+gem 'http'
 
 group :development do
   gem 'annotate_gem' # Add comments to your Gemfile with each dependency's description.
