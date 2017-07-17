@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    annotate_gem (0.0.11)
+      bundler (~> 1.1)
     ast (2.3.0)
     parallel (1.11.2)
     parser (2.4.0.0)
@@ -23,6 +25,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate_gem
   rubocop
 
 BUNDLED WITH
