@@ -25,6 +25,7 @@ GEM
     powerpack (0.1.1)
     public_suffix (2.0.5)
     rack (2.0.3)
+    rack-cors (1.0.1)
     rack-protection (2.0.0)
       rack
     rainbow (2.2.2)
@@ -56,6 +57,7 @@ DEPENDENCIES
   annotate_gem
   http
   oj
+  rack-cors
   rubocop
   sinatra
 
@@ -63,4 +65,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.15.1
+   1.15.2
