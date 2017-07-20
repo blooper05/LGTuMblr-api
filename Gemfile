@@ -6,7 +6,7 @@ ruby '2.4.1'
 
 gem 'http' # HTTP should be easy
 gem 'oj' # A fast JSON parser and serializer.
-gem 'rack-cors'
+gem 'rack-cors' # Middleware for enabling Cross-Origin Resource Sharing in Rack apps
 gem 'sinatra' # Classy web-development dressed in a DSL
 
 group :development do
