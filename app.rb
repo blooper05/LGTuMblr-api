@@ -10,6 +10,8 @@ LIMIT   = 10
 PERIOD  = 6 * 30 * 24 * 60 * 60
 WIDTH   = 500
 
+configure { set :server, :puma }
+
 get '/images' do
   json = []
 
