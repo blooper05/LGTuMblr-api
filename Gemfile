@@ -8,7 +8,7 @@ gem 'http' # HTTP should be easy
 gem 'oj' # A fast JSON parser and serializer.
 gem 'rack-cors' # Middleware for enabling Cross-Origin Resource Sharing in Rack apps
 gem 'sinatra' # Classy web-development dressed in a DSL
-gem 'thin'
+gem 'thin' # A thin and fast web server
 
 group :development do
   gem 'annotate_gem' # Add comments to your Gemfile with each dependency's description.
