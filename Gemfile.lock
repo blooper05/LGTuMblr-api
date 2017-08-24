@@ -18,13 +18,13 @@ GEM
     http-form_data (1.0.3)
     http_parser.rb (0.6.0)
     mustermann (1.0.0)
-    oj (3.3.4)
+    oj (3.3.5)
     parallel (1.12.0)
     parser (2.4.0.0)
       ast (~> 2.2)
     powerpack (0.1.1)
     public_suffix (2.0.5)
-    puma (3.9.1)
+    puma (3.10.0)
     rack (2.0.3)
     rack-cors (1.0.1)
     rack-protection (2.0.0)
@@ -67,4 +67,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.15.3
+   1.15.4
