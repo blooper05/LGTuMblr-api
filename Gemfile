@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.4.1'
+ruby '2.4.2'
 
 gem 'http'         # HTTP should be easy
 gem 'newrelic_rpm' # New Relic Ruby Agent
