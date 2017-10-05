@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/ruby,sublimetext,vim,jetbrains,linux,osx,windows
+# Created by https://www.gitignore.io/api/ruby,sublimetext,vim,visualstudiocode,jetbrains,linux,osx,windows
 
 ### JetBrains ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
@@ -45,6 +45,9 @@ atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
 .idea/replstate.xml
+
+# Ruby plugin and RubyMine
+/.rakeTasks
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
@@ -202,6 +205,14 @@ Session.vim
 # auto-generated tag files
 tags
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -223,4 +234,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/ruby,sublimetext,vim,jetbrains,linux,osx,windows
+# End of https://www.gitignore.io/api/ruby,sublimetext,vim,visualstudiocode,jetbrains,linux,osx,windows
