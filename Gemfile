@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.5.0'
+ruby File.read('.ruby-version').strip
 
 gem 'http'         # HTTP should be easy
 gem 'newrelic_rpm' # New Relic Ruby Agent
