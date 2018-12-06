@@ -46,7 +46,7 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.4)
       tilt (~> 2.0)
-    tilt (2.0.8)
+    tilt (2.0.9)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
@@ -66,7 +66,7 @@ DEPENDENCIES
   sinatra
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.5.3p105
 
 BUNDLED WITH
-   1.16.1
+   1.16.6
