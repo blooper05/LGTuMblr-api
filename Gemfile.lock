@@ -19,7 +19,7 @@ GEM
     http_parser.rb (0.6.0)
     jaro_winkler (1.5.2)
     mustermann (1.0.3)
-    newrelic_rpm (6.1.0.352)
+    newrelic_rpm (6.2.0.354)
     oj (3.7.10)
     parallel (1.14.0)
     parser (2.6.0.0)
