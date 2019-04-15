@@ -20,7 +20,7 @@ GEM
     jaro_winkler (1.5.2)
     mustermann (1.0.3)
     newrelic_rpm (6.2.0.354)
-    oj (3.7.11)
+    oj (3.7.12)
     parallel (1.17.0)
     parser (2.6.2.1)
       ast (~> 2.4.0)
