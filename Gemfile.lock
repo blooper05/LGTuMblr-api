@@ -17,7 +17,7 @@ GEM
       domain_name (~> 0.5)
     http-form_data (2.1.1)
     http_parser.rb (0.6.0)
-    jaro_winkler (1.5.2)
+    jaro_winkler (1.5.3)
     mustermann (1.0.3)
     newrelic_rpm (6.4.0.356)
     oj (3.7.12)
@@ -31,7 +31,7 @@ GEM
     rack-protection (2.0.5)
       rack
     rainbow (3.0.0)
-    rubocop (0.71.0)
+    rubocop (0.72.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
