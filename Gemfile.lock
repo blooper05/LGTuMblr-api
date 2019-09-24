@@ -3,8 +3,8 @@ GEM
   specs:
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    annotate_gem (0.0.13)
-      bundler (~> 1.1)
+    annotate_gem (0.0.14)
+      bundler (>= 1.1)
     ast (2.4.0)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
