@@ -1,22 +1,27 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.6.0)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     annotate_gem (0.0.14)
       bundler (>= 1.1)
     ast (2.4.0)
-    domain_name (0.5.20180417)
+    domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    http (4.1.1)
+    ffi (1.11.1)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
+    http (4.2.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 2.0)
-      http_parser.rb (~> 0.6.0)
+      http-parser (~> 1.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http-form_data (2.1.1)
-    http_parser.rb (0.6.0)
+    http-parser (1.2.1)
+      ffi-compiler (>= 1.0, < 2.0)
     jaro_winkler (1.5.3)
     mustermann (1.0.3)
     newrelic_rpm (6.7.0.359)
@@ -25,7 +30,7 @@ GEM
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
-    public_suffix (3.0.3)
+    public_suffix (4.0.1)
     puma (4.2.1)
       nio4r (~> 2.0)
     rack (2.0.7)
@@ -33,6 +38,7 @@ GEM
     rack-protection (2.0.7)
       rack
     rainbow (3.0.0)
+    rake (13.0.0)
     rubocop (0.74.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -49,7 +55,7 @@ GEM
     tilt (2.0.9)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.5)
+    unf_ext (0.0.7.6)
     unicode-display_width (1.6.0)
 
 PLATFORMS
