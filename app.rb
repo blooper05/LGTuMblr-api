@@ -32,6 +32,7 @@ helpers do
 
   def api_response
     params = { api_key: API_KEY,
+               filter:  :text,
                tag:     TAGS.sample,
                before:  randomized_timestamp }
     HTTP.get(URL, params: params)
