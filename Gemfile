@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby File.read('.ruby-version').strip
 
-gem 'falcon'
+gem 'falcon' # A fast, asynchronous, rack-compatible web server.
 gem 'http'         # HTTP should be easy
 gem 'newrelic_rpm' # New Relic Ruby Agent
 gem 'oj'           # A fast JSON parser and serializer.
