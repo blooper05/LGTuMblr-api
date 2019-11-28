@@ -4,10 +4,10 @@ source 'https://rubygems.org'
 
 ruby File.read('.ruby-version').strip
 
+gem 'falcon'
 gem 'http'         # HTTP should be easy
 gem 'newrelic_rpm' # New Relic Ruby Agent
 gem 'oj'           # A fast JSON parser and serializer.
-gem 'falcon'
 gem 'rack-cors'    # Middleware for enabling Cross-Origin Resource Sharing in Rack apps
 gem 'sinatra'      # Classy web-development dressed in a DSL
 
