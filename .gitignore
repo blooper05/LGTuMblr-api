@@ -185,6 +185,10 @@ build-iPhoneSimulator/
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
 
+### Ruby Patch ###
+# Used by RuboCop. Remote config files pulled in from inherit_from directive.
+# .rubocop-https?--*
+
 ### SublimeText ###
 # Cache files for Sublime Text
 *.tmlanguage.cache
@@ -231,10 +235,15 @@ Sessionx.vim
 
 # Temporary
 .netrwhist
+
 # Auto-generated tag files
 tags
+
 # Persistent undo
 [._]*.un~
+
+# Coc configuration directory
+.vim
 
 ### VisualStudioCode ###
 .vscode/*
