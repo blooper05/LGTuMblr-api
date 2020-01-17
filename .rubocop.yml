@@ -11,6 +11,10 @@ Layout/HashAlignment:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
 
+Layout/LineLength:
+  Exclude:
+    - Gemfile
+
 #################### Style #################################
 
 Style/TrailingCommaInArguments:
@@ -21,9 +25,3 @@ Style/TrailingCommaInArrayLiteral:
 
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
-
-#################### Metrics ###############################
-
-Metrics/LineLength:
-  Exclude:
-    - Gemfile
