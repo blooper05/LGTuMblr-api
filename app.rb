@@ -39,7 +39,8 @@ helpers do
   end
 
   def parse(response)
-    Oj.load(response.body.to_s, symbol_keys: true)[:response].flat_map do |res|
+    json = Oj.load(response.body.to_s, mode: :null, symbol_keys: true)
+    json[:response].flat_map do |res|
       next unless res[:type] == 'photo'
 
       res[:photos].flat_map do |photo|
