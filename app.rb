@@ -39,12 +39,12 @@ helpers do
   end
 
   def parse(response)
-    Oj.load(response.body.to_s)['response'].flat_map do |res|
-      next unless res['type'] == 'photo'
+    Oj.load(response.body.to_s, symbol_keys: true)[:response].flat_map do |res|
+      next unless res[:type] == 'photo'
 
-      res['photos'].flat_map do |photo|
-        photo['alt_sizes'].map do |size|
-          size['url'] if size['width'] == WIDTH
+      res[:photos].flat_map do |photo|
+        photo[:alt_sizes].map do |size|
+          size[:url] if size[:width] == WIDTH
         end
       end
     end.compact
