@@ -61,7 +61,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     newrelic_rpm (6.12.0.367)
     nio4r (2.5.2)
-    oj (3.10.8)
+    oj (3.10.16)
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
