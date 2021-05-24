@@ -27,9 +27,9 @@ end
 
 helpers do
   def randomized_timestamp
-    now  = Time.now
+    now  = Time.now.to_i
     from = now - PERIOD
-    rand(from..now).to_i
+    rand(from..now)
   end
 
   def api_response
