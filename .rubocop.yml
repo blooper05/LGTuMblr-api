@@ -1,21 +1,17 @@
 ---
 AllCops:
   DefaultFormatter: fuubar
-  DisplayCopNames: true
   DisplayStyleGuide: true
   ExtraDetails: true
+  NewCops: enable
 
-#################### Layout ################################
+#################### Layout ###########################
 
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
 
-Layout/LineLength:
-  Exclude:
-    - Gemfile
-
-#################### Style #################################
+#################### Style ###############################
 
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
