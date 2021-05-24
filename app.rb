@@ -42,13 +42,13 @@ helpers do
 
   def parse(response)
     json = Oj.load(response.body.to_s, mode: :null, symbol_keys: true)
-    json[:response].flat_map do |res|
-      next unless res[:type] == 'photo'
 
-      res[:photos].flat_map do |photo|
-        photo[:alt_sizes].map do |size|
-          size[:url] if size[:width] == WIDTH
-        end
+    json[:response].map do |res|
+      case res
+      in type: 'photo', photos: [*, { alt_sizes: [*, { width: WIDTH, url: url }, *] }, *]
+        url
+      else
+        nil
       end
     end.compact
   end
