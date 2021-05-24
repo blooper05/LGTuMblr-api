@@ -9,3 +9,5 @@ use Rack::Cors do
     resource '*', headers: :any, methods: :get
   end
 end
+
+use Rack::Deflater
