@@ -13,6 +13,8 @@ WIDTH   = 500
 configure { set :server, :falcon }
 
 get '/images' do
+  content_type :json
+
   json = []
 
   while json.size < LIMIT
