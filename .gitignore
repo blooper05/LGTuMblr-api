@@ -1,9 +1,9 @@
 
-# Created by https://www.gitignore.io/api/ruby,sublimetext,vim,visualstudiocode,jetbrains+all,linux,osx,windows
-# Edit at https://www.gitignore.io/?templates=ruby,sublimetext,vim,visualstudiocode,jetbrains+all,linux,osx,windows
+# Created by https://www.toptal.com/developers/gitignore/api/ruby,sublimetext,vim,visualstudiocode,jetbrains+all,linux,osx,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=ruby,sublimetext,vim,visualstudiocode,jetbrains+all,linux,osx,windows
 
 ### JetBrains+all ###
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
@@ -33,6 +33,9 @@
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
 # .idea/modules.xml
 # .idea/*.iml
 # .idea/modules
@@ -110,7 +113,7 @@ modules.xml
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -185,7 +188,6 @@ build-iPhoneSimulator/
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
 
-### Ruby Patch ###
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
 
@@ -224,6 +226,7 @@ GitHub.sublime-settings
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
 [._]*.sw[a-p]
 [._]s[a-rt-v][a-z]
 [._]ss[a-gi-z]
@@ -235,15 +238,10 @@ Sessionx.vim
 
 # Temporary
 .netrwhist
-
 # Auto-generated tag files
 tags
-
 # Persistent undo
 [._]*.un~
-
-# Coc configuration directory
-.vim
 
 ### VisualStudioCode ###
 .vscode/*
@@ -251,10 +249,12 @@ tags
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+*.code-workspace
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+.ionide
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -282,4 +282,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/ruby,sublimetext,vim,visualstudiocode,jetbrains+all,linux,osx,windows
+# End of https://www.toptal.com/developers/gitignore/api/ruby,sublimetext,vim,visualstudiocode,jetbrains+all,linux,osx,windows
