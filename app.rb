@@ -46,10 +46,8 @@ helpers do
 
     json[:response].map do |res|
       case res
-      in type: 'photo', photos: [*, { alt_sizes: [*, { width: WIDTH, url: url }, *] }, *]
-        url
+      in type: 'photo', photos: [*, { alt_sizes: [*, { width: WIDTH, url: }, *] }, *] then url
       else
-        nil
       end
     end.compact
   end
