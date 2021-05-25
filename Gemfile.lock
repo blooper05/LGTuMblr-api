@@ -27,6 +27,7 @@ GEM
     async-pool (0.3.6)
       async (~> 1.25)
     build-environment (1.13.0)
+    concurrent-ruby (1.1.8)
     console (1.12.0)
       fiber-local
     domain_name (0.5.20190701)
@@ -43,6 +44,19 @@ GEM
       process-metrics (~> 0.2.0)
       rack (>= 1.0)
       samovar (~> 2.1)
+    faraday (1.4.2)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.1)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.1.0)
     ffi (1.15.1)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -61,6 +75,7 @@ GEM
       rake (~> 13.0)
     localhost (1.1.8)
     mapping (1.1.1)
+    multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     newrelic_rpm (7.0.0)
@@ -105,6 +120,13 @@ GEM
     samovar (2.1.4)
       console (~> 1.0)
       mapping (~> 1.0)
+    sentry-ruby (4.4.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      faraday (>= 1.0)
+      sentry-ruby-core (= 4.4.2)
+    sentry-ruby-core (4.4.2)
+      concurrent-ruby
+      faraday
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -128,6 +150,7 @@ DEPENDENCIES
   oj
   rack-cors
   rubocop
+  sentry-ruby
   sinatra
 
 RUBY VERSION
