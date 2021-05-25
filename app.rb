@@ -16,11 +16,8 @@ get '/images' do
   content_type :json
 
   json = []
-
-  while json.size < LIMIT
-    json.concat(parse(api_response))
-    json.uniq! { |url| url.split('/')[3] }
-  end
+  json.concat(parse(api_response)) while json.size < LIMIT
+  json.uniq! { |url| url.split('/')[3] }
 
   Oj.dump(json)
 end
