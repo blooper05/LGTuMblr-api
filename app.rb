@@ -17,7 +17,7 @@ get '/images' do
 
   json = []
   json.concat(parse(api_response)) while json.size < LIMIT
-  json.uniq! { |url| url.split('/')[3] }
+  json.uniq! { |url| url.split('/', 5)[3] }
 
   Oj.dump(json)
 end
