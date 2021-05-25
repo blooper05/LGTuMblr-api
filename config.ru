@@ -11,3 +11,10 @@ use Rack::Cors do
 end
 
 use Rack::Deflater
+
+Sentry.init do |config|
+  config.breadcrumbs_logger = %i[sentry_logger http_logger]
+  config.traces_sample_rate = 0.5
+end
+
+use Sentry::Rack::CaptureExceptions
