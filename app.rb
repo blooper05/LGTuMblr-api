@@ -16,8 +16,11 @@ get '/images' do
   content_type :json
 
   json = []
-  json.concat(parse(api_response)) while json.size < LIMIT
-  json.uniq! { |url| url.split('/', 5)[3] }
+
+  HTTP.persistent(URL) do |http|
+    json.concat(parse(api_response(http))) while json.size < LIMIT
+    json.uniq! { |url| url.split('/', 5)[3] }
+  end
 
   Oj.dump(json)
 end
@@ -29,12 +32,12 @@ helpers do
     rand(from..now)
   end
 
-  def api_response
+  def api_response(http)
     params = { api_key: API_KEY,
                filter:  :text,
                tag:     TAGS.sample,
                before:  randomized_timestamp }
-    HTTP.use(:auto_inflate).headers('accept-encoding': :gzip)
+    http.use(:auto_inflate).headers('accept-encoding': :gzip)
         .get(URL, params: params)
   end
 
