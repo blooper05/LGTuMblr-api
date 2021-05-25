@@ -37,7 +37,8 @@ helpers do
                filter:  :text,
                tag:     TAGS.sample,
                before:  randomized_timestamp }
-    HTTP.get(URL, params: params)
+    HTTP.use(:auto_inflate).headers('accept-encoding': :gzip)
+        .get(URL, params: params)
   end
 
   def parse(response)
