@@ -12,6 +12,7 @@ end
 
 use Rack::ContentLength
 use Rack::Deflater
+use Rack::ETag
 
 Sentry.init do |config|
   config.breadcrumbs_logger = %i[sentry_logger http_logger]
