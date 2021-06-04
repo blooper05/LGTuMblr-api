@@ -44,11 +44,11 @@ helpers do
   def parse(response)
     json = Oj.load(response.body.to_s, mode: :null, symbol_keys: true)
 
-    json[:response].map do |res|
+    json[:response].filter_map do |res|
       case res
       in type: 'photo', photos: [*, { alt_sizes: [*, { width: WIDTH, url: }, *] }, *] then url
       else
       end
-    end.compact
+    end
   end
 end
