@@ -78,7 +78,7 @@ GEM
     multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    newrelic_rpm (7.0.0)
+    newrelic_rpm (7.1.0)
     nio4r (2.5.7)
     oj (3.11.5)
     parallel (1.20.1)
