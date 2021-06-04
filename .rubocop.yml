@@ -1,4 +1,7 @@
 ---
+require:
+  - rubocop-performance
+
 AllCops:
   DefaultFormatter: fuubar
   DisplayStyleGuide: true
