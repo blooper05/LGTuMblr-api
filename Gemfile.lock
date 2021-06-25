@@ -44,7 +44,7 @@ GEM
       process-metrics (~> 0.2.0)
       rack (>= 1.0)
       samovar (~> 2.1)
-    faraday (1.4.2)
+    faraday (1.4.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -125,11 +125,11 @@ GEM
     samovar (2.1.4)
       console (~> 1.0)
       mapping (~> 1.0)
-    sentry-ruby (4.5.1)
+    sentry-ruby (4.5.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       faraday (>= 1.0)
-      sentry-ruby-core (= 4.5.1)
-    sentry-ruby-core (4.5.1)
+      sentry-ruby-core (= 4.5.2)
+    sentry-ruby-core (4.5.2)
       concurrent-ruby
       faraday
     sinatra (2.1.0)
