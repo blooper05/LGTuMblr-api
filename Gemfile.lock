@@ -125,11 +125,11 @@ GEM
     samovar (2.1.4)
       console (~> 1.0)
       mapping (~> 1.0)
-    sentry-ruby (4.5.2)
+    sentry-ruby (4.6.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       faraday (>= 1.0)
-      sentry-ruby-core (= 4.5.2)
-    sentry-ruby-core (4.5.2)
+      sentry-ruby-core (= 4.6.0)
+    sentry-ruby-core (4.6.0)
       concurrent-ruby
       faraday
     sinatra (2.1.0)
