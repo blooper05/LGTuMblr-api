@@ -68,7 +68,7 @@ GEM
       ffi (>= 1.0.0)
       rake
     fiber-local (1.0.0)
-    http (5.0.2)
+    http (5.0.4)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
@@ -147,7 +147,7 @@ GEM
     timers (4.3.3)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7)
+    unf_ext (0.0.8)
     unicode-display_width (2.0.0)
 
 PLATFORMS
