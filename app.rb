@@ -38,7 +38,7 @@ helpers do
                tag:     TAGS.sample,
                before:  randomized_timestamp }
     http.use(:auto_inflate).headers('accept-encoding': :gzip)
-        .get(URL, params: params)
+        .get(URL, params:)
   end
 
   def parse(response)
