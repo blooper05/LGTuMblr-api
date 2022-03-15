@@ -17,6 +17,9 @@ use Rack::ETag
 Sentry.init do |config|
   config.breadcrumbs_logger = %i[sentry_logger http_logger]
   config.traces_sample_rate = 0.5
+
+  config.capture_exception_frame_locals = true
+  config.send_client_reports            = false
 end
 
 use Sentry::Rack::CaptureExceptions
