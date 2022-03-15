@@ -46,8 +46,10 @@ helpers do
 
     json[:response].filter_map do |res|
       case res
-      in type: 'photo', photos: [*, { alt_sizes: [*, { width: WIDTH, url: }, *] }, *] then url
+      in type: 'photo', photos: [*, { alt_sizes: [*, { width: WIDTH, url: }, *] }, *]
+        url
       else
+        nil
       end
     end
   end
