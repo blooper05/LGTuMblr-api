@@ -4,7 +4,7 @@ require 'bundler'
 Bundler.require
 
 URL     = 'https://api.tumblr.com/v2/tagged'
-API_KEY = ENV['API_KEY']
+API_KEY = ENV.fetch('API_KEY', nil)
 TAGS    = ENV['TAGS'].split(',')
 LIMIT   = 10
 PERIOD  = 6 * 30 * 24 * 60 * 60
