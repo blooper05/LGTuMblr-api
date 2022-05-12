@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version').strip
 
 gem 'falcon'       # A fast, asynchronous, rack-compatible web server.
+gem 'httpx'        # HTTPX, to the future, and beyond
 gem 'oj'           # A fast JSON parser and serializer.
 gem 'rack-cors'    # Middleware for enabling Cross-Origin Resource Sharing in Rack apps
 gem 'sinatra'      # Classy web-development dressed in a DSL
@@ -18,5 +19,3 @@ group :development do
   gem 'rubocop-performance' # Automatic performance checking tool for Ruby code.
   gem 'rubocop-rake'        # A RuboCop plugin for Rake
 end
-
-gem "httpx", "~> 0.19.8"

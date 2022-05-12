@@ -3,26 +3,22 @@
 require 'bundler'
 Bundler.require
 
-URL     = 'https://api.tumblr.com/v2/tagged'
-API_KEY = ENV.fetch('API_KEY')
-TAGS    = ENV.fetch('TAGS').split(',')
-LIMIT   = 10
-PERIOD  = 6 * 30 * 24 * 60 * 60
-WIDTH   = 500
+URL         = 'https://api.tumblr.com/v2/tagged'
+API_KEY     = ENV.fetch('API_KEY')
+TAGS        = ENV.fetch('TAGS').split(',')
+PERIOD      = 6 * 30 * 24 * 60 * 60
+WIDTH       = 500
+CONCURRENCY = 3
 
 configure { set :server, :falcon }
 
 get '/images' do
   content_type :json
 
-  json = []
+  image_urls = http_requests.flat_map { |response| parse(response) }
+  image_urls.uniq! { |url| url.split('/', 5)[3] }
 
-  HTTP.persistent(URL) do |http|
-    json.concat(parse(api_response(http))) while json.size < LIMIT
-    json.uniq! { |url| url.split('/', 5)[3] }
-  end
-
-  Oj.dump(json)
+  Oj.dump(image_urls)
 end
 
 helpers do
@@ -32,13 +28,22 @@ helpers do
     rand(from..now)
   end
 
-  def api_response(http)
-    params = { api_key: API_KEY,
-               filter:  :text,
-               tag:     TAGS.sample,
-               before:  randomized_timestamp }
-    http.use(:auto_inflate).headers('accept-encoding': :gzip)
-        .get(URL, params:)
+  def params
+    { api_key: API_KEY,
+      filter:  :text,
+      tag:     TAGS.sample,
+      before:  randomized_timestamp }
+  end
+
+  def http
+    HTTPX.plugin(:compression)
+         .plugin(:persistent)
+         .plugin(:response_cache)
+  end
+
+  def http_requests
+    requests = Array.new(CONCURRENCY) { [:get, URL, { params: }] }
+    http.request(requests)
   end
 
   def parse(response)

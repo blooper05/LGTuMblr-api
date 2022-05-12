@@ -115,7 +115,7 @@ PLATFORMS
 DEPENDENCIES
   annotate_gem
   falcon
-  httpx (~> 0.19.8)
+  httpx
   newrelic_rpm
   oj
   rack-cors
