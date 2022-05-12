@@ -13,10 +13,12 @@ CONCURRENCY = 3
 
 class App < Hanami::API
   get '/images' do
+    headers['content-type'] = 'application/json'
+
     image_urls = http_requests.flat_map { |response| parse(response) }
     image_urls.uniq! { |url| url.split('/', 5)[3] }
 
-    json(image_urls)
+    Oj.dump(image_urls)
   end
 
   helpers do
