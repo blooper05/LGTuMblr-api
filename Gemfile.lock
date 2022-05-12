@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/hanami/api.git
+  revision: 10c0d3b79232e933dd4e9e74bb2c6feb4a1f539e
+  specs:
+    hanami-api (0.2.0)
+      hanami-router (~> 2.0.alpha)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,8 +49,6 @@ GEM
       rack (>= 1.0)
       samovar (~> 2.1)
     fiber-local (1.0.0)
-    hanami-api (0.2.0)
-      hanami-router (~> 2.0.alpha)
     hanami-router (2.0.0.alpha6)
       mustermann (~> 1.0)
       mustermann-contrib (~> 1.0)
@@ -117,7 +122,7 @@ PLATFORMS
 DEPENDENCIES
   annotate_gem
   falcon
-  hanami-api (~> 0.2.0)
+  hanami-api!
   httpx
   newrelic_rpm
   oj

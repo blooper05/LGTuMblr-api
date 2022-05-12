@@ -4,10 +4,11 @@ source 'https://rubygems.org'
 
 ruby File.read('.ruby-version').strip
 
-gem 'falcon'       # A fast, asynchronous, rack-compatible web server.
-gem 'httpx'        # HTTPX, to the future, and beyond
-gem 'oj'           # A fast JSON parser and serializer.
-gem 'rack-cors'    # Middleware for enabling Cross-Origin Resource Sharing in Rack apps
+gem 'falcon'                           # A fast, asynchronous, rack-compatible web server.
+gem 'hanami-api', github: 'hanami/api' # Hanami API
+gem 'httpx'                            # HTTPX, to the future, and beyond
+gem 'oj'                               # A fast JSON parser and serializer.
+gem 'rack-cors'                        # Middleware for enabling Cross-Origin Resource Sharing in Rack apps
 
 gem 'newrelic_rpm' # New Relic Ruby Agent
 gem 'sentry-ruby'  # A gem that provides a client interface for the Sentry error logger
@@ -18,5 +19,3 @@ group :development do
   gem 'rubocop-performance' # Automatic performance checking tool for Ruby code.
   gem 'rubocop-rake'        # A RuboCop plugin for Rake
 end
-
-gem "hanami-api", "~> 0.2.0"

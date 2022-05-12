@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require './app'
-run Sinatra::Application
+run App.new
 
 use Rack::Cors do
   allow do
@@ -10,7 +10,6 @@ use Rack::Cors do
   end
 end
 
-use Rack::ContentLength
 use Rack::Deflater
 use Rack::ETag
 
