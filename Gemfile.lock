@@ -42,6 +42,13 @@ GEM
       rack (>= 1.0)
       samovar (~> 2.1)
     fiber-local (1.0.0)
+    hanami-api (0.2.0)
+      hanami-router (~> 2.0.alpha)
+    hanami-router (2.0.0.alpha6)
+      mustermann (~> 1.0)
+      mustermann-contrib (~> 1.0)
+      rack (~> 2.0)
+    hansi (0.2.0)
     http-2-next (0.5.0)
     httpx (0.19.8)
       http-2-next (>= 0.4.1)
@@ -50,6 +57,9 @@ GEM
     mapping (1.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    mustermann-contrib (1.1.1)
+      hansi (~> 0.2.0)
+      mustermann (= 1.1.1)
     newrelic_rpm (8.7.0)
     oj (3.13.11)
     parallel (1.22.1)
@@ -68,8 +78,6 @@ GEM
     rack (2.2.3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
-    rack-protection (2.2.0)
-      rack
     rainbow (3.1.1)
     regexp_parser (2.4.0)
     rexml (3.2.5)
@@ -99,12 +107,6 @@ GEM
       sentry-ruby-core (= 5.3.1)
     sentry-ruby-core (5.3.1)
       concurrent-ruby
-    sinatra (2.2.0)
-      mustermann (~> 1.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.0)
-      tilt (~> 2.0)
-    tilt (2.0.10)
     timers (4.3.3)
     traces (0.4.1)
     unicode-display_width (2.1.0)
@@ -115,6 +117,7 @@ PLATFORMS
 DEPENDENCIES
   annotate_gem
   falcon
+  hanami-api (~> 0.2.0)
   httpx
   newrelic_rpm
   oj
@@ -123,7 +126,6 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rake
   sentry-ruby
-  sinatra
 
 RUBY VERSION
    ruby 3.1.2p20
