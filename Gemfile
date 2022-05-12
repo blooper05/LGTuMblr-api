@@ -8,7 +8,6 @@ gem 'falcon'       # A fast, asynchronous, rack-compatible web server.
 gem 'httpx'        # HTTPX, to the future, and beyond
 gem 'oj'           # A fast JSON parser and serializer.
 gem 'rack-cors'    # Middleware for enabling Cross-Origin Resource Sharing in Rack apps
-gem 'sinatra'      # Classy web-development dressed in a DSL
 
 gem 'newrelic_rpm' # New Relic Ruby Agent
 gem 'sentry-ruby'  # A gem that provides a client interface for the Sentry error logger
