@@ -18,3 +18,5 @@ group :development do
   gem 'rubocop-performance' # Automatic performance checking tool for Ruby code.
   gem 'rubocop-rake'        # A RuboCop plugin for Rake
 end
+
+gem "httpx", "~> 0.19.8"

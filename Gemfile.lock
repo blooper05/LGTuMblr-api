@@ -1,8 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
     annotate_gem (0.0.14)
       bundler (>= 1.1)
     ast (2.4.2)
@@ -31,8 +29,6 @@ GEM
     concurrent-ruby (1.1.10)
     console (1.15.0)
       fiber-local
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
     falcon (0.39.2)
       async
       async-container (~> 0.16.0)
@@ -45,23 +41,11 @@ GEM
       process-metrics (~> 0.2.0)
       rack (>= 1.0)
       samovar (~> 2.1)
-    ffi (1.15.5)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
-      rake
     fiber-local (1.0.0)
-    http (5.0.4)
-      addressable (~> 2.8)
-      http-cookie (~> 1.0)
-      http-form_data (~> 2.2)
-      llhttp-ffi (~> 0.4.0)
-    http-cookie (1.0.4)
-      domain_name (~> 0.5)
-    http-form_data (2.3.0)
+    http-2-next (0.5.0)
+    httpx (0.19.8)
+      http-2-next (>= 0.4.1)
     io-event (1.0.9)
-    llhttp-ffi (0.4.0)
-      ffi-compiler (~> 1.0)
-      rake (~> 13.0)
     localhost (1.1.9)
     mapping (1.1.1)
     mustermann (1.1.1)
@@ -81,14 +65,12 @@ GEM
     protocol-http2 (0.14.2)
       protocol-hpack (~> 1.4)
       protocol-http (~> 0.18)
-    public_suffix (4.0.7)
     rack (2.2.3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-protection (2.2.0)
       rack
     rainbow (3.1.1)
-    rake (13.0.6)
     regexp_parser (2.4.0)
     rexml (3.2.5)
     rubocop (1.29.1)
@@ -125,9 +107,6 @@ GEM
     tilt (2.0.10)
     timers (4.3.3)
     traces (0.4.1)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8.1)
     unicode-display_width (2.1.0)
 
 PLATFORMS
@@ -136,7 +115,7 @@ PLATFORMS
 DEPENDENCIES
   annotate_gem
   falcon
-  http
+  httpx (~> 0.19.8)
   newrelic_rpm
   oj
   rack-cors
