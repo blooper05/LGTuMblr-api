@@ -22,26 +22,6 @@ class App < Hanami::API
   end
 
   helpers do
-    def randomized_timestamp
-      now  = Time.now.to_i
-      from = now - PERIOD
-      rand(from..now)
-    end
-
-    def params
-      { api_key: API_KEY,
-        filter:  :text,
-        tag:     TAGS.sample,
-        before:  randomized_timestamp }
-    end
-
-    def http
-      HTTPX.plugin(:compression)
-           .plugin(:persistent)
-           .plugin(:response_cache)
-           .with_headers('user-agent': USER_AGENT)
-    end
-
     def http_requests
       requests = Array.new(CONCURRENCY) { [:get, URL, { params: }] }
       http.request(requests)
@@ -58,6 +38,30 @@ class App < Hanami::API
           nil
         end
       end
+    end
+  end
+
+  helpers do
+    private
+
+    def http
+      HTTPX.plugin(:compression)
+           .plugin(:persistent)
+           .plugin(:response_cache)
+           .with_headers('user-agent': USER_AGENT)
+    end
+
+    def params
+      { api_key: API_KEY,
+        filter:  :text,
+        tag:     TAGS.sample,
+        before:  randomized_timestamp }
+    end
+
+    def randomized_timestamp
+      now  = Time.now.to_i
+      from = now - PERIOD
+      rand(from..now)
     end
   end
 end
