@@ -17,6 +17,9 @@ Layout/HashAlignment:
 
 #################### Style ###############################
 
+Style/Documentation:
+  Enabled: false
+
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
