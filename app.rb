@@ -6,7 +6,7 @@ Bundler.require
 URL         = 'https://api.tumblr.com/v2/tagged'
 API_KEY     = ENV.fetch('API_KEY')
 TAGS        = ENV.fetch('TAGS').split(',')
-USER_AGENT  = 'LGTuMblr-api/0.5.0'
+USER_AGENT  = 'LGTuMblr-api/0.6.0'
 PERIOD      = 6 * 30 * 24 * 60 * 60
 WIDTH       = 500
 CONCURRENCY = 3
