@@ -55,7 +55,7 @@ GEM
       rack (~> 2.0)
     hansi (0.2.0)
     http-2-next (0.5.0)
-    httpx (0.20.0)
+    httpx (0.20.1)
       http-2-next (>= 0.4.1)
     io-event (1.0.9)
     localhost (1.1.9)
