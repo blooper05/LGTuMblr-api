@@ -21,6 +21,9 @@ class App < Roda
           .uniq { |url| url.split('/', 5)[3] }
   end
 
+  plugin :public
+  route(&:public)
+
   private
 
   def parse(response)
