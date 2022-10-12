@@ -36,6 +36,7 @@ GEM
     concurrent-ruby (1.1.10)
     console (1.15.3)
       fiber-local
+    dotenv (2.8.1)
     falcon (0.42.3)
       async
       async-container (~> 0.16.0)
@@ -125,6 +126,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate_gem
+  dotenv (~> 2.8)
   falcon
   hanami-api!
   httpx
