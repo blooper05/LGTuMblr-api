@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require './app'
-run App.new
+run App.freeze.app
 
 use Rack::Cors do
   allow do

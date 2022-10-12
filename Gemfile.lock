@@ -116,7 +116,7 @@ DEPENDENCIES
   newrelic_rpm
   oj
   rack-cors
-  roda (~> 3.60)
+  roda
   rubocop
   rubocop-performance
   rubocop-rake

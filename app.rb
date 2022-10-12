@@ -11,31 +11,27 @@ PERIOD      = 6 * 30 * 24 * 60 * 60
 WIDTH       = 500
 CONCURRENCY = 3
 
-class App < Hanami::API
-  get '/images' do
-    headers['content-type'] = 'application/json'
+class App < Roda
+  plugin :json, serializer: ->(o) { Oj.dump(o) }
+  plugin :static_routing
 
-    image_urls = http_requests.flat_map { |response| parse(response) }
-    image_urls.uniq! { |url| url.split('/', 5)[3] }
-
-    Oj.dump(image_urls)
+  static_get '/images' do
+    Tumblr.new.requests
+          .flat_map { |response| parse(response) }
+          .uniq { |url| url.split('/', 5)[3] }
   end
 
-  helpers do
-    def http_requests
-      Tumblr.new.requests
-    end
+  private
 
-    def parse(response)
-      json = Oj.load(response.body.to_s, mode: :null, symbol_keys: true)
+  def parse(response)
+    json = Oj.load(response.body.to_s, mode: :null, symbol_keys: true)
 
-      json[:response].filter_map do |res|
-        case res
-        in type: 'photo', photos: [*, { alt_sizes: [*, { width: WIDTH, url: }, *] }, *]
-          url
-        else
-          nil
-        end
+    json[:response].filter_map do |res|
+      case res
+      in type: 'photo', photos: [*, { alt_sizes: [*, { width: WIDTH, url: }, *] }, *]
+        url
+      else
+        nil
       end
     end
   end
