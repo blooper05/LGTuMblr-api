@@ -6,7 +6,7 @@ Bundler.require(:default, ENV.fetch('RACK_ENV'))
 URL         = 'https://api.tumblr.com/v2/tagged'
 API_KEY     = ENV.fetch('API_KEY')
 TAGS        = ENV.fetch('TAGS').split(',')
-USER_AGENT  = 'LGTuMblr-api/0.6.1'
+USER_AGENT  = 'LGTuMblr-api/0.6.2'
 PERIOD      = 6 * 30 * 24 * 60 * 60
 WIDTH       = 500
 CONCURRENCY = 3
