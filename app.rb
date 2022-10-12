@@ -23,8 +23,7 @@ class App < Hanami::API
 
   helpers do
     def http_requests
-      requests = Array.new(CONCURRENCY) { [:get, URL, { params: }] }
-      http.request(requests)
+      Tumblr.new.requests
     end
 
     def parse(response)
@@ -40,28 +39,33 @@ class App < Hanami::API
       end
     end
   end
+end
 
-  helpers do
-    private
+class Tumblr
+  def initialize
+    @client = HTTPX.plugin(:compression)
+                   .plugin(:persistent)
+                   .plugin(:response_cache)
+                   .with_headers('user-agent': USER_AGENT)
+  end
 
-    def http
-      HTTPX.plugin(:compression)
-           .plugin(:persistent)
-           .plugin(:response_cache)
-           .with_headers('user-agent': USER_AGENT)
-    end
+  def requests
+    requests = Array.new(CONCURRENCY) { [:get, URL, { params: }] }
+    @client.request(requests)
+  end
 
-    def params
-      { api_key: API_KEY,
-        filter:  :text,
-        tag:     TAGS.sample,
-        before:  randomized_timestamp }
-    end
+  private
 
-    def randomized_timestamp
-      now  = Time.now.to_i
-      from = now - PERIOD
-      rand(from..now)
-    end
+  def params
+    { api_key: API_KEY,
+      filter:  :text,
+      tag:     TAGS.sample,
+      before:  randomized_timestamp }
+  end
+
+  def randomized_timestamp
+    now  = Time.now.to_i
+    from = now - PERIOD
+    rand(from..now)
   end
 end
