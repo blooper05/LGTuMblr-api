@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bundler'
-Bundler.require
+Bundler.require(:default, ENV.fetch('RACK_ENV'))
 
 URL         = 'https://api.tumblr.com/v2/tagged'
 API_KEY     = ENV.fetch('API_KEY')

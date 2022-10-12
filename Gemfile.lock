@@ -126,7 +126,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate_gem
-  dotenv (~> 2.8)
+  dotenv
   falcon
   hanami-api!
   httpx

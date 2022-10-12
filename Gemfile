@@ -14,10 +14,10 @@ gem 'newrelic_rpm' # New Relic Ruby Agent
 gem 'sentry-ruby'  # A gem that provides a client interface for the Sentry error logger
 
 group :development do
+  gem 'dotenv', require: 'dotenv/load' # Loads environment variables from `.env`.
+
   gem 'annotate_gem'        # Add comments to your Gemfile with each dependency's description.
   gem 'rubocop'             # Automatic Ruby code style checking tool.
   gem 'rubocop-performance' # Automatic performance checking tool for Ruby code.
   gem 'rubocop-rake'        # A RuboCop plugin for Rake
 end
-
-gem "dotenv", "~> 2.8"
