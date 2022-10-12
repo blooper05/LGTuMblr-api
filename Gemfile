@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version').strip
 
 gem 'falcon'                           # A fast, asynchronous, rack-compatible web server.
-gem 'hanami-api', github: 'hanami/api' # Hanami API
 gem 'httpx'                            # HTTPX, to the future, and beyond
 gem 'oj'                               # A fast JSON parser and serializer.
 gem 'rack-cors'                        # Middleware for enabling Cross-Origin Resource Sharing in Rack apps
