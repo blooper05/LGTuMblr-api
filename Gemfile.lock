@@ -73,6 +73,9 @@ GEM
     rack (3.0.0)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
+    rackup (0.2.2)
+      rack (>= 3.0.0.beta1)
+      webrick
     rainbow (3.1.1)
     regexp_parser (2.5.0)
     rexml (3.2.5)
@@ -104,6 +107,7 @@ GEM
     timers (4.3.4)
     traces (0.7.0)
     unicode-display_width (2.3.0)
+    webrick (1.7.0)
 
 PLATFORMS
   ruby
@@ -116,6 +120,7 @@ DEPENDENCIES
   newrelic_rpm
   oj
   rack-cors
+  rackup (~> 0.2.2)
   roda
   rubocop
   rubocop-performance
