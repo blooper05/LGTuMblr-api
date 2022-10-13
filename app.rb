@@ -3,13 +3,7 @@
 require 'bundler'
 Bundler.require(:default, ENV.fetch('RACK_ENV'))
 
-URL         = 'https://api.tumblr.com/v2/tagged'
-API_KEY     = ENV.fetch('API_KEY')
-TAGS        = ENV.fetch('TAGS').split(',')
-USER_AGENT  = 'LGTuMblr-api/0.7.1'
-PERIOD      = 6 * 30 * 24 * 60 * 60
-WIDTH       = 500
-CONCURRENCY = 3
+require './tumblr'
 
 class App < Roda
   plugin :json, serializer: ->(o) { Oj.dump(o) }
@@ -26,6 +20,8 @@ class App < Roda
 
   private
 
+  WIDTH = 500
+
   def parse(response)
     json = Oj.load(response.body.to_s, mode: :null, symbol_keys: true)
 
@@ -37,34 +33,5 @@ class App < Roda
         nil
       end
     end
-  end
-end
-
-class Tumblr
-  def initialize
-    @client = HTTPX.plugin(:compression)
-                   .plugin(:persistent)
-                   .plugin(:response_cache)
-                   .with_headers('user-agent': USER_AGENT)
-  end
-
-  def requests
-    requests = Array.new(CONCURRENCY) { [:get, URL, { params: }] }
-    @client.request(requests)
-  end
-
-  private
-
-  def params
-    { api_key: API_KEY,
-      filter:  :text,
-      tag:     TAGS.sample,
-      before:  randomized_timestamp }
-  end
-
-  def randomized_timestamp
-    now  = Time.now.to_i
-    from = now - PERIOD
-    rand(from..now)
   end
 end
