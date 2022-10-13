@@ -120,7 +120,7 @@ DEPENDENCIES
   newrelic_rpm
   oj
   rack-cors
-  rackup (~> 0.2.2)
+  rackup
   roda
   rubocop
   rubocop-performance
