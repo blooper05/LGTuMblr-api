@@ -6,7 +6,7 @@ Bundler.require(:default, ENV.fetch('RACK_ENV'))
 require './tumblr'
 
 class App < Roda
-  plugin :json, serializer: ->(o) { Oj.dump(o) }
+  plugin :json, serializer: ->(o) { Oj.dump(o, mode: :wab) }
   plugin :static_routing
 
   static_get '/images' do
@@ -23,7 +23,7 @@ class App < Roda
   WIDTH = 500
 
   def parse(response)
-    json = Oj.load(response.body.to_s, mode: :null, symbol_keys: true)
+    json = Oj.load(response.body.to_s, mode: :wab)
 
     json[:response].filter_map do |res|
       case res
