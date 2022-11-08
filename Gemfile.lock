@@ -102,7 +102,7 @@ GEM
     samovar (2.1.4)
       console (~> 1.0)
       mapping (~> 1.0)
-    sentry-ruby (5.5.0)
+    sentry-ruby (5.6.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
     timers (4.3.4)
     traces (0.7.0)
