@@ -81,7 +81,7 @@ GEM
     rexml (3.2.5)
     roda (3.62.0)
       rack
-    rubocop (1.40.0)
+    rubocop (1.41.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.2.1)
