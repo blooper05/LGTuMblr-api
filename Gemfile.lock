@@ -45,7 +45,7 @@ GEM
       samovar (~> 2.1)
     fiber-local (1.0.0)
     http-2-next (0.5.1)
-    httpx (0.23.2)
+    httpx (0.23.3)
       http-2-next (>= 0.4.1)
     io-event (1.0.9)
     json (2.6.3)
