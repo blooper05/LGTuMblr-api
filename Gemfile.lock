@@ -26,7 +26,7 @@ GEM
     async-pool (0.3.12)
       async (>= 1.25)
     build-environment (1.13.0)
-    concurrent-ruby (1.2.0)
+    concurrent-ruby (1.2.2)
     console (1.15.3)
       fiber-local
     dotenv (2.8.1)
@@ -102,7 +102,7 @@ GEM
     samovar (2.1.4)
       console (~> 1.0)
       mapping (~> 1.0)
-    sentry-ruby (5.8.0)
+    sentry-ruby (5.10.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
     timers (4.3.4)
     traces (0.7.0)
