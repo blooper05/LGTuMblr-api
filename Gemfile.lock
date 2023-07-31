@@ -52,7 +52,7 @@ GEM
     localhost (1.1.9)
     mapping (1.1.1)
     newrelic_rpm (8.14.0)
-    oj (3.14.3)
+    oj (3.15.1)
     openssl (3.0.1)
     parallel (1.23.0)
     parser (3.2.2.1)
