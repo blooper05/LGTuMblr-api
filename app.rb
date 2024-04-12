@@ -15,7 +15,7 @@ class App < Roda
           .uniq { |url| url.split('/', 5)[3] }
   end
 
-  plugin :public
+  plugin :public, brotli: true
   route(&:public)
 
   private
