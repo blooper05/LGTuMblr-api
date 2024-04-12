@@ -18,6 +18,8 @@ class App < Roda
   plugin :public, brotli: true
   route(&:public)
 
+  plugin :heartbeat
+
   private
 
   WIDTH = 500
