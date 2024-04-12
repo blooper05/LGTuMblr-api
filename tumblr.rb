@@ -9,7 +9,7 @@ class Tumblr
   CONCURRENCY = 3
 
   def initialize
-    @client = HTTPX.plugin(:compression)
+    @client = HTTPX.plugin(:brotli)
                    .plugin(:persistent)
                    .plugin(:response_cache)
                    .with_headers('user-agent': USER_AGENT)

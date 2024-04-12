@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 ruby File.read('.ruby-version').strip
 
+gem 'brotli'    # Brotli compressor/decompressor
 gem 'falcon'    # A fast, asynchronous, rack-compatible web server.
 gem 'httpx'     # HTTPX, to the future, and beyond
 gem 'oj'        # A fast JSON parser and serializer.
@@ -22,5 +23,3 @@ group :development do
   gem 'rubocop-performance' # Automatic performance checking tool for Ruby code.
   gem 'rubocop-rake'        # A RuboCop plugin for Rake
 end
-
-gem "brotli", "~> 0.5.0"

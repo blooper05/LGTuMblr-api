@@ -126,7 +126,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate_gem
-  brotli (~> 0.5.0)
+  brotli
   dotenv
   falcon
   httpx
