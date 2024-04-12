@@ -70,7 +70,7 @@ GEM
     protocol-rack (0.2.4)
       protocol-http (~> 0.23)
       rack (>= 1.0)
-    rack (3.0.7)
+    rack (3.0.10)
     rack-cors (2.0.1)
       rack (>= 2.0.0)
     rackup (2.1.0)
