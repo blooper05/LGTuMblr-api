@@ -22,3 +22,5 @@ group :development do
   gem 'rubocop-performance' # Automatic performance checking tool for Ruby code.
   gem 'rubocop-rake'        # A RuboCop plugin for Rake
 end
+
+gem "brotli", "~> 0.5.0"
