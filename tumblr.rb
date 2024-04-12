@@ -16,7 +16,7 @@ class Tumblr
   end
 
   def requests
-    requests = Array.new(CONCURRENCY) { [:get, URL, { params: }] }
+    requests = Array.new(CONCURRENCY) { ['GET', URL, { params: }] }
     @client.request(requests)
   end
 
