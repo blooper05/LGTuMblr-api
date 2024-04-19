@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby File.read('.ruby-version').strip
+ruby file: '.ruby-version'
 
 gem 'brotli'    # Brotli compressor/decompressor
 gem 'falcon'    # A fast, asynchronous, rack-compatible web server.
