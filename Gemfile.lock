@@ -9,9 +9,8 @@ GEM
       fiber-annotation
       io-event (~> 1.5, >= 1.5.1)
       timers (~> 4.1)
-    async-container (0.18.0)
-      async
-      async-io
+    async-container (0.18.1)
+      async (~> 2.10)
     async-http (0.65.0)
       async (>= 2.10.2)
       async-pool (>= 0.6.1)
@@ -23,8 +22,6 @@ GEM
       traces (>= 0.10.0)
     async-http-cache (0.4.3)
       async-http (~> 0.56)
-    async-io (1.43.2)
-      async
     async-pool (0.6.1)
       async (>= 1.25)
     async-service (0.12.0)
@@ -38,12 +35,11 @@ GEM
       fiber-local
       json
     dotenv (3.1.0)
-    falcon (0.46.0)
+    falcon (0.46.1)
       async
       async-container (~> 0.18)
       async-http (~> 0.57)
       async-http-cache (~> 0.4.0)
-      async-io (~> 1.22)
       async-service (~> 0.10)
       bundler
       localhost (~> 1.1)
@@ -56,7 +52,7 @@ GEM
     http-2-next (1.0.3)
     httpx (1.2.4)
       http-2-next (>= 1.0.3)
-    io-endpoint (0.10.1)
+    io-endpoint (0.10.2)
     io-event (1.5.1)
     io-stream (0.3.0)
     json (2.7.2)
