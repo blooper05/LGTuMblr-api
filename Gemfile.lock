@@ -11,7 +11,7 @@ GEM
       timers (~> 4.1)
     async-container (0.18.2)
       async (~> 2.10)
-    async-http (0.65.1)
+    async-http (0.66.2)
       async (>= 2.10.2)
       async-pool (>= 0.6.1)
       io-endpoint (~> 0.10)
@@ -35,10 +35,10 @@ GEM
       fiber-local
       json
     dotenv (3.1.1)
-    falcon (0.47.0)
+    falcon (0.47.1)
       async
       async-container (~> 0.18)
-      async-http (~> 0.57)
+      async-http (~> 0.66, >= 0.66.2)
       async-http-cache (~> 0.4.0)
       async-service (~> 0.10)
       bundler
