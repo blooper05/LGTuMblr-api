@@ -4,8 +4,8 @@ GEM
     annotate_gem (0.0.14)
       bundler (>= 1.1)
     ast (2.4.2)
-    async (2.10.2)
-      console (~> 1.10)
+    async (2.11.0)
+      console (~> 1.25, >= 1.25.2)
       fiber-annotation
       io-event (~> 1.5, >= 1.5.1)
       timers (~> 4.1)
@@ -30,12 +30,12 @@ GEM
     bigdecimal (3.1.7)
     brotli (0.5.0)
     concurrent-ruby (1.2.3)
-    console (1.24.0)
+    console (1.25.2)
       fiber-annotation
-      fiber-local
+      fiber-local (~> 1.1)
       json
     dotenv (3.1.2)
-    falcon (0.47.1)
+    falcon (0.47.4)
       async
       async-container (~> 0.18)
       async-http (~> 0.66, >= 0.66.2)
@@ -48,7 +48,9 @@ GEM
       protocol-rack (~> 0.5)
       samovar (~> 2.3)
     fiber-annotation (0.2.0)
-    fiber-local (1.0.0)
+    fiber-local (1.1.0)
+      fiber-storage
+    fiber-storage (0.1.0)
     http-2-next (1.0.3)
     httpx (1.2.4)
       http-2-next (>= 1.0.3)
@@ -71,7 +73,7 @@ GEM
       console (~> 1.8)
       samovar (~> 2.1)
     protocol-hpack (1.4.3)
-    protocol-http (0.26.4)
+    protocol-http (0.26.5)
     protocol-http1 (0.19.1)
       protocol-http (~> 0.22)
     protocol-http2 (0.17.0)
