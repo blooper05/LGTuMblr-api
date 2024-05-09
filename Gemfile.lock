@@ -94,7 +94,7 @@ GEM
     rexml (3.2.6)
     roda (3.79.0)
       rack
-    rubocop (1.63.4)
+    rubocop (1.63.5)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
