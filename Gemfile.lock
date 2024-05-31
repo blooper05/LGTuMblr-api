@@ -66,7 +66,7 @@ GEM
       bigdecimal (>= 3.0)
     openssl (3.2.0)
     parallel (1.24.0)
-    parser (3.3.1.0)
+    parser (3.3.2.0)
       ast (~> 2.4.1)
       racc
     process-metrics (0.2.1)
@@ -95,7 +95,7 @@ GEM
       strscan (>= 3.0.9)
     roda (3.80.0)
       rack
-    rubocop (1.64.0)
+    rubocop (1.64.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
