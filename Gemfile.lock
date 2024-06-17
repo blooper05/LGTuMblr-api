@@ -52,7 +52,7 @@ GEM
       fiber-storage
     fiber-storage (0.1.0)
     http-2-next (1.0.3)
-    httpx (1.2.5)
+    httpx (1.2.6)
       http-2-next (>= 1.0.3)
     io-endpoint (0.10.3)
     io-event (1.5.1)
