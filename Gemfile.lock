@@ -82,7 +82,7 @@ GEM
       protocol-http (~> 0.23)
       rack (>= 1.0)
     racc (1.8.0)
-    rack (3.1.5)
+    rack (3.1.7)
     rack-cors (2.0.2)
       rack (>= 2.0.0)
     rackup (2.1.0)
@@ -92,7 +92,7 @@ GEM
     regexp_parser (2.9.2)
     rexml (3.3.3)
       strscan
-    roda (3.81.0)
+    roda (3.82.0)
       rack
     rubocop (1.64.1)
       json (~> 2.3)
