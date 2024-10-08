@@ -120,7 +120,7 @@ GEM
     samovar (2.3.0)
       console (~> 1.0)
       mapping (~> 1.0)
-    sentry-ruby (5.20.1)
+    sentry-ruby (5.21.0)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
     traces (0.13.1)
