@@ -92,9 +92,8 @@ GEM
     rack (3.1.8)
     rack-cors (2.0.2)
       rack (>= 2.0.0)
-    rackup (2.1.0)
+    rackup (2.2.0)
       rack (>= 3)
-      webrick (~> 1.8)
     rainbow (3.1.1)
     regexp_parser (2.9.2)
     roda (3.85.0)
@@ -125,7 +124,6 @@ GEM
       concurrent-ruby (~> 1.0, >= 1.0.2)
     traces (0.13.1)
     unicode-display_width (2.6.0)
-    webrick (1.8.2)
 
 PLATFORMS
   ruby
