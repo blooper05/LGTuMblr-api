@@ -96,7 +96,7 @@ GEM
       rack (>= 3)
     rainbow (3.1.1)
     regexp_parser (2.9.3)
-    roda (3.86.0)
+    roda (3.88.0)
       rack
     rubocop (1.69.1)
       json (~> 2.3)
