@@ -98,7 +98,7 @@ GEM
     regexp_parser (2.10.0)
     roda (3.88.0)
       rack
-    rubocop (1.69.1)
+    rubocop (1.71.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
