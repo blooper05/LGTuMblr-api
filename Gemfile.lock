@@ -30,7 +30,7 @@ GEM
       async-container (~> 0.16)
     bigdecimal (3.1.9)
     brotli (0.6.0)
-    concurrent-ruby (1.3.4)
+    concurrent-ruby (1.3.5)
     console (1.29.2)
       fiber-annotation
       fiber-local (~> 1.1)
@@ -119,7 +119,7 @@ GEM
     samovar (2.3.0)
       console (~> 1.0)
       mapping (~> 1.0)
-    sentry-ruby (5.22.1)
+    sentry-ruby (5.22.2)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
     traces (0.14.1)
