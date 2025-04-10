@@ -41,7 +41,7 @@ GEM
       fiber-annotation
       fiber-local (~> 1.1)
       json
-    dotenv (3.1.7)
+    dotenv (3.1.8)
     falcon (0.51.1)
       async
       async-container (~> 0.20)
